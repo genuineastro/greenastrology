@@ -1,13 +1,13 @@
 // ── Data ─────────────────────────────────────────────────────────────────────
 export const REVIEWS = [
-  { name: "Priya S.", city: "London", text: "Acharya Ji reunited me with my partner after 2 years of separation. Pure miracle!", stars: 5, pp:"/pp/ppg1.jpeg" },
-  { name: "Anita K.", city: "Birmingham", text: "My marriage was on the verge of divorce. After consulting Acharya Ji, everything changed.", stars: 5, pp:"/pp/ppg2.jpeg" },
+  { name: "Priya S.", city: "London", text: "Acharya Ji reunited me with my partner after 2 years of separation. Pure miracle!", stars: 5, pp:"/pp/ppg1.png" },
+  { name: "Anita K.", city: "Birmingham", text: "My marriage was on the verge of divorce. After consulting Acharya Ji, everything changed.", stars: 5, pp:"/pp/ppg2.png" },
   { name: "Sunil R.", city: "Manchester", text: "100% genuine. My ex came back within 3 weeks exactly as Acharya Ji promised.", stars: 5, pp:"/pp/pp1.jpeg" },
   { name: "Meera P.", city: "Leicester", text: "I was sceptical at first but the results were beyond my expectations. Highly recommend.", stars: 5, pp:"/pp/ppg3.png" },
   { name: "Kavir D.", city: "Leeds", text: "Lost all hope in my relationship. Acharya Ji gave me hope and delivered results.", stars: 5, pp:"/pp/pp2.png" },
-  { name: "Reena T.", city: "Glasgow", text: "Very discreet and professional. My family problems resolved within a month.", stars: 5, pp:"/pp/pp1.jpeg" },
+  { name: "Reena T.", city: "Glasgow", text: "Very discreet and professional. My family problems resolved within a month.", stars: 5, pp:"/pp/ppg4.png" },
   { name: "Pankaj M.", city: "Bristol", text: "Acharya Ji's guidance on my marriage was spot on. We're now living happily together.", stars: 5, pp:"/pp/pp3.png" },
-  { name: "Deepak V.", city: "Coventry", text: "Amazing experience. He understood my problem without me explaining much. Truly gifted.", stars: 5, pp:"/pp/pp1.jpeg" },
+  { name: "Deepak V.", city: "Coventry", text: "Amazing experience. He understood my problem without me explaining much. Truly gifted.", stars: 5, pp:"/pp/pp4.png" },
 ];
 
 export const GALLERY_ITEMS = [
