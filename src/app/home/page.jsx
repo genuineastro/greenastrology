@@ -29,6 +29,8 @@ export default function AcharyaJiLanding() {
       {/* --- TRUST / REVIEWS MARQUEE --- */}
       <TrustBar />
 
+      <ProblemsSolver/>
+
       {/* --- VIDEO TESTIMONIALS --- */}
       <VideoTestimonials />
 
@@ -40,7 +42,6 @@ export default function AcharyaJiLanding() {
 
       {/* --- SERVICES --- */}
       {/* <ServicesSection /> */}
-      <ProblemsSolver/>
 
       {/* --- TEXT TESTIMONIALS --- */}
       <TextTestimonials />
