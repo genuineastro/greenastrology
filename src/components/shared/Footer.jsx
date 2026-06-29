@@ -52,7 +52,7 @@ const Footer = () => {
 
           <p className="text-[11px] text-[rgba(180,220,185,0.38)] text-center
                       tracking-wide leading-relaxed">
-           Designed and created by
+           Designed and developed by
             <span className="mx-2 text-[rgba(74,163,89,0.3)]">·</span>
             <a href="http://techbooth.in" target='_blank' className=' text-blue-700 underline '>TECHBOOTH</a>
           </p>
