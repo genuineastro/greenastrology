@@ -162,7 +162,7 @@ export default function Navbar() {
 
         /* responsive */
         @media (max-width: 1024px) {
-          .cn-links, .cn-social, .cn-wa { display: none !important; }
+          .cn-links, .cn-social{ display: none !important; }
           .cn-menu-btn { display: flex; }
           .cn-inner { padding: 14px 20px; }
         }

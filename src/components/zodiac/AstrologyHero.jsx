@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import ZodiacWheel from "./Zodiacwheel";
 import { MarqueeReviews } from "../sections/TrustBar";
 import { IG_LINK, WA_LINK } from "@/lib/constants";
+import { MessageCircle, MessageCircleCheck } from "lucide-react";
 
 const NAV_LINKS = ["Home", "About Us", "Gallery", "Blogs", "Contact Us"];
 
@@ -65,6 +66,10 @@ export default function AstrologyHero() {
         .font-raleway { font-family:'Raleway',sans-serif; }
         .animate-counter-spin { animation: counterSpin 40s linear infinite; }
         .animate-pulse-glow   { animation: pulseGlow   4s  ease-in-out infinite; }
+          @keyframes pulse-wa {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.45); }
+          50%      { box-shadow: 0 0 0 8px rgba(37,211,102,0); }
+        }
       `}</style>
 
       <section className="font-raleway relative overflow-hidden min-h-screen" style={{ background: "#080f0a" }}>
@@ -133,23 +138,69 @@ export default function AstrologyHero() {
                 <strong className="text-green-400">thousands</strong>{" "}
                 rebuild relationships, resolve marriage problems, and find love again — across the UK.
               </p>
-              <div className="flex gap-3">
-                <button
-                  onClick={() => navigate(WA_LINK)}
-                  className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
-                                   bg-green-800 text-green-100 border-none cursor-pointer
-                                   hover:bg-green-700 transition-colors">
-                  WhatsApp us
-                </button>
-                <button
-                  onClick={() => navigate(IG_LINK)}
-                  className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
-                                   bg-transparent text-green-400 border border-green-700/50 cursor-pointer
-                                   hover:border-green-500 transition-colors">
-                  Instagram
-                </button>
-              </div>
+              
+              <div className="flex gap-3 flex-wrap">
 
+                {/* ── WhatsApp ── */}
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center gap-2.5
+      font-raleway px-7 py-3.5 rounded-md
+      text-[11px] tracking-[2px] uppercase font-semibold
+      bg-[#25D366] text-white
+      hover:bg-[#22c25e] hover:scale-[1.03]
+      hover:shadow-[0_8px_24px_rgba(37,211,102,0.45)]
+      active:scale-[0.98]
+      transition-all duration-300
+      animate-[pulse-wa_2.4s_ease-in-out_infinite]"
+                >
+                  <WhatsAppIcon
+                    className="w-4 h-4 group-hover:-rotate-12 group-hover:scale-110 transition-transform duration-300"
+                  />
+
+                  <span>WhatsApp Us</span>
+
+                  {/* Notification Dot */}
+                  <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-white">
+                    <span className="absolute inset-0 rounded-full bg-white animate-ping" />
+                  </span>
+                </a>
+
+                {/* ── Instagram ── */}
+                <a
+                  href={IG_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center gap-2.5
+      font-raleway px-7 py-3.5 rounded-md
+      text-[11px] tracking-[2px] uppercase font-semibold
+      text-white overflow-hidden
+      hover:scale-[1.03]
+      active:scale-[0.98]
+      transition-transform duration-300"
+                  style={{
+                    background:
+                      "linear-gradient(135deg,#f9ce34 0%,#ee2a7b 45%,#6228d7 100%)",
+                  }}
+                >
+                  <span
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background:
+                        "linear-gradient(135deg,#fcdd5c 0%,#f2488f 45%,#7b3ce8 100%)",
+                    }}
+                  />
+
+                  <InstagramIcon
+                    className="relative w-4 h-4 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300"
+                  />
+
+                  <span className="relative">Instagram</span>
+                </a>
+
+              </div>
               {/* screen shots review */}
               <div className="md:hidden">
                 <MarqueeReviews auto className="md:hidden" />
@@ -251,15 +302,15 @@ export default function AstrologyHero() {
 
               <div className="flex gap-3">
                 <button
-                onClick={()=>navigate(WA_LINK)}
-                className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
+                  onClick={() => navigate(WA_LINK)}
+                  className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
                                    bg-green-800 text-green-100 border-none cursor-pointer
                                    hover:bg-green-700 transition-colors">
                   Whatsapp us
                 </button>
                 <button
-                onClick={()=>navigate(IG_LINK)}
-                 className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
+                  onClick={() => navigate(IG_LINK)}
+                  className="font-raleway px-6 py-3 rounded-sm text-[11px] tracking-[2px] uppercase
                                    bg-transparent text-green-400 border border-green-700/50 cursor-pointer
                                    hover:border-green-500 transition-colors">
                   Instagram
@@ -336,5 +387,38 @@ export default function AstrologyHero() {
         </div>
       </section>
     </>
+  );
+}
+
+
+/** @typedef {import('react').SVGProps<SVGSVGElement>} IconProps */
+
+/** @param {IconProps} props */
+export function InstagramIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5Zm0 2h8.5A3.75 3.75 0 0 1 20 7.75v8.5A3.75 3.75 0 0 1 16.25 20h-8.5A3.75 3.75 0 0 1 4 16.25v-8.5A3.75 3.75 0 0 1 7.75 4Zm9.5 1a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5ZM12 6.5A5.5 5.5 0 1 0 17.5 12 5.5 5.5 0 0 0 12 6.5Zm0 2A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5Z" />
+    </svg>
+  );
+}
+
+/** @typedef {import('react').SVGProps<SVGSVGElement>} IconProps */
+
+/** @param {IconProps} props */
+export function WhatsAppIcon(props) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.02 0C5.39 0 0 5.39 0 12.02c0 2.12.56 4.2 1.62 6.03L0 24l6.12-1.6a11.98 11.98 0 0 0 5.9 1.52h.01C18.61 23.92 24 18.53 24 11.9c0-3.2-1.25-6.21-3.48-8.42ZM12.03 21.7c-1.8 0-3.55-.48-5.09-1.4l-.37-.22-3.63.95.97-3.54-.24-.37a9.66 9.66 0 1 1 8.36 4.58Zm5.3-7.24c-.29-.15-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.15-.19.29-.73.94-.9 1.13-.16.2-.33.22-.62.07-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.42-1.7-1.59-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.49.14-.16.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.55-.88-2.13-.23-.56-.47-.49-.64-.5h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.99 2.43 0 1.43 1.03 2.8 1.17 2.99.15.19 2.02 3.09 4.9 4.33.68.29 1.21.46 1.62.59.68.22 1.29.19 1.78.12.54-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34Z" />
+    </svg>
   );
 }
