@@ -74,8 +74,8 @@ export const SERVICES = [
 ];
 
 export const VIDEOS = [
-  { id: "r8UsNNJu8vs", title: "Sarah from London — Love Restored After 2 Years" },
-  { id: "VvHDURBT0M0", title: "Kavya from Birmingham — Marriage Saved" },
-  { id: "st92HsjEHtU", title: "Priya from Manchester — Found Love Again" },
+  { id: "md5ZiP_q3IY", title: "Sarah from Paris — Love Restored After 2 Years" },
+  { id: "y4YiHWbG-04", title: "Kavya from Birmingham — Marriage Saved" },
+  { id: "rEKe_hckR-s", title: "Priya from Manchester — Found Love Again" },
 ];
 
