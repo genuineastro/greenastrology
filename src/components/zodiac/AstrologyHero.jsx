@@ -147,7 +147,7 @@ export default function AstrologyHero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2.5
-      font-raleway px-6 py-3.5 rounded-md
+      font-raleway max-sm:px-4 px-7 py-3.5 rounded-md
       text-[11px] tracking-[2px] uppercase font-semibold
       bg-[#25D366] text-white
       hover:bg-[#22c25e] hover:scale-[1.03]
@@ -174,7 +174,7 @@ export default function AstrologyHero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2.5
-      font-raleway px-6 py-3.5 rounded-md
+      font-raleway max-sm:px-4 px-7 py-3.5 rounded-md
       text-[11px] tracking-[2px] uppercase font-semibold
       text-white overflow-hidden
       hover:scale-[1.03]
