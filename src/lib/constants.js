@@ -5,6 +5,7 @@ export const YT_LINK = "https://www.youtube.com/@astroguruji7815";
 export const X_LINK = "#" 
 export const WA_NUM = "+1 306 807-3839"
 
+
 export const SITE_CONFIG = {
   name: "Acharya Ji",
   tagline: "London's Most Trusted Love & Relationship Healer",
