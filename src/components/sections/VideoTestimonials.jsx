@@ -245,7 +245,7 @@ const VideoTestimonials = () => {
           {/* track */}
           <div
             ref={trackRef}
-            className="flex gap-3 sm:gap-4 overflow-x-auto items-center
+            className="flex justify-center gap-3 sm:gap-4 overflow-x-auto items-center
                        px-4 py-4
                        [scrollbar-width:none] [-ms-overflow-style:none]
                        [&::-webkit-scrollbar]:hidden

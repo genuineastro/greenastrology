@@ -15,7 +15,7 @@ const NAV_LINKS = [
 const SOCIAL = [
   { label: "in", href: IG_LINK },
   { label: "f", href: FB_LINK },
-  { label: "x", href: X_LINK },
+  // { label: "x", href: X_LINK },
   { label: "yt", href: YT_LINK },
 ];
 
@@ -79,7 +79,7 @@ export default function Navbar() {
         .cn-wa {
           display: inline-flex; align-items: center; gap: 7px;
           padding: 9px 20px; border-radius: 3px;
-          background: #1e6b30; color: #c8eecf;
+          background: #25D366; color: #fff;
           font-family: 'Raleway', sans-serif; font-size: 10.5px;
           font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
           border: 1px solid rgba(93,207,114,0.25); cursor: pointer;
@@ -88,7 +88,7 @@ export default function Navbar() {
           transition: all .25s;
         }
         .cn-wa:hover { background: #25883d; box-shadow: 0 0 30px rgba(30,107,48,0.55); }
-        .cn-wa-dot { width: 6px; height: 6px; border-radius: 50%; background: #9edaab; animation: cn-pulse 1.8s ease-in-out infinite; }
+        .cn-wa-dot { width: 6px; height: 6px; border-radius: 50%; background: #EB5238; animation: cn-pulse 1.8s ease-in-out infinite; }
         @keyframes cn-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)} }
 
         /* hamburger */

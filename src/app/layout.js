@@ -2,6 +2,7 @@ import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
 import Footer from "@/components/shared/Footer";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+import { GoogleTagManager } from "@next/third-parties/google";
 // import { ThemeProvider } from "./providers/theame-provider";
 
 export default function RootLayout({
@@ -18,20 +19,22 @@ export default function RootLayout({
         cz-shortcut-listen="true"       // demo only
       >
         {/* <ThemeProvider> */}
-          {/* Progress */}
-          <ScrollProgress />
+        {/* Progress */}
+        <ScrollProgress />
 
-          {/* ── NAV ── */}
-          <Navbar />
-          <main>
+        {/* ── NAV ── */}
+        <Navbar />
+        <main>
 
-            {children}
-          </main>
+          {children}
+        </main>
 
-          {/* ── FOOTER ── */}
-          <Footer />
+        {/* ── FOOTER ── */}
+        <Footer />
         {/* </ThemeProvider> */}
       </body>
+      
+      <GoogleTagManager gtmId="GTM-TJ8Q4Q4H" />
     </html>
   );
 }

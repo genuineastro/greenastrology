@@ -147,7 +147,7 @@ export default function AstrologyHero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2.5
-      font-raleway px-7 py-3.5 rounded-md
+      font-raleway px-6 py-3.5 rounded-md
       text-[11px] tracking-[2px] uppercase font-semibold
       bg-[#25D366] text-white
       hover:bg-[#22c25e] hover:scale-[1.03]
@@ -160,7 +160,7 @@ export default function AstrologyHero() {
                     className="w-4 h-4 group-hover:-rotate-12 group-hover:scale-110 transition-transform duration-300"
                   />
 
-                  <span>WhatsApp Us</span>
+                  <span>WhatsApp</span>
 
                   {/* Notification Dot */}
                   <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-white">
@@ -174,7 +174,7 @@ export default function AstrologyHero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-2.5
-      font-raleway px-7 py-3.5 rounded-md
+      font-raleway px-6 py-3.5 rounded-md
       text-[11px] tracking-[2px] uppercase font-semibold
       text-white overflow-hidden
       hover:scale-[1.03]
